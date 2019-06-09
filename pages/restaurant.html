@@ -1,0 +1,124 @@
+<!-- <div>Restaurant Info goes here</div>
+<h1>Show Restaurant {{restaurantId}} details here</h1> -->
+<div class="bg">
+<nav class="navbar navbar-default navbar-fixed">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Foodie</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#!/home">Home</a></li> <!--to go to the home page -->
+              <li><a href="#!/about">About</a></li>
+              <li><a href="#!/order">Order Online</a></li>
+              <li><a href="#!/">Logout</a></li> <!--to go to the login form page -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!-- 'ng-if' directive to show a blank page if that restaurant does not exist -->
+<div>
+<img src="{{restaurant.pic}}" height="300" width="1100" class="center">
+</div>
+<hr>
+<br>
+<div class="restaurant" ng-if="restaurant.name">
+    <div class="rest-wrapper">
+        <div class="image">
+            <img src="{{restaurant.image}}" height="100" width="100">
+        </div>
+        <div class="rest-info">
+            <div class="rest-category">
+               <small>{{restaurant.category}} </small>
+            </div>
+            <div class="rest-name">
+            <strong>{{restaurant.name}}</strong>
+            </div>
+            <div>
+               <strong> {{restaurant.location}}</strong>
+            </div>
+            <div class="rest-address">
+                {{restaurant.address}}
+            </div>
+        </div>
+    </div>
+    <div class="rest-extra">
+        <div class="type">
+            <div><small>Cuisines:</small></div>
+            <div><small>Cost for Two: </small></div>
+            <div><small>Hours:</small></div>
+            <div ng-if="restaurant.bestDish"><small>Recommended: </small></div>
+        </div>
+        <div class="value">
+            <div>{{restaurant.cuisines}}</div>
+            <div>₹{{restaurant.cost | number}}</div>
+            <div>{{restaurant.hours}}</div>
+            <!--  added information about 'bestDish' -->
+            <div class="bestDish" ng-if="restaurant.bestDish">
+    	          <span>{{restaurant.bestDish.name}} </span>
+                <!-- Created a button for 'getting ingredients' of a recommended dish offered by that restaurant -->
+                <div ng-click="getIngredients(restaurant.bestDish.image);toggle_gl();" class="button">Get Ingredients</div> <!--Added a click event on the button-->
+    		    </div>
+        </div>
+    </div>
+    <div class="rating">
+        <strong>{{restaurant.vote}}</strong>
+    </div>
+    <hr>
+      <img src="{{restaurant.bestDish.image}}" height="300" width="540">
+      <hr>
+    <div ng-if="ingredients && gl==1">
+        <strong>
+        <ol>
+        <li ng-repeat="ingredient in ingredients">
+        {{ingredient}}
+        </li>
+        </ol></strong>
+    </div>
+    <a href="#!/grocerylist" ng-click="" style="color:white"><div class="button1" ng-init= "getIngredients(restaurant.bestDish.image)">  <strong>Make Grocery List</strong></div></a><br>
+    <a href="{{restaurant.map}}" style="color:white"><div class="button1"> <strong>Locate Me using Google-Map</strong></div></a>
+
+    <div class="extrafeatures">
+        <div class="btn-group" >
+            <button type="button" class="btn btn-default" disabled>
+              <strong>Overview</strong>
+            </button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default" disabled>
+              <strong>Call</strong>
+            </button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default" disabled>
+              <strong>Book a Table</strong>
+            </button>
+        </div>
+        <div class="btn-group">
+             <button type="button" class="btn btn-default" disabled>
+                  <strong>Menu</strong>
+             </button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default" disabled>
+              <strong>Reviews</strong>
+            </button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default" disabled>
+              <strong>Photos</strong>
+            </button>
+        </div>
+    </div>
+</div>
+</div>

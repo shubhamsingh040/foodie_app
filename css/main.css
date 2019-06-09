@@ -1,0 +1,236 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F3E8;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.hero {
+    background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
+    background-size: cover;
+    min-height: 300px;
+    border-radius: 4px;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .navbar {
+    color: white;
+    background-color: #cb202d;
+}
+
+#app .navbar a {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#app .login {
+    background-color: #cb202d;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .login-form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 1rem;
+    padding-top: 0;
+    border-radius: 4px;
+}
+
+/* CSS to make all the relevant information about a restaurant look beautiful*/
+.hero {
+    margin-bottom: 2rem;
+}
+
+.restaurant {
+    background-color: white;
+    position: relative;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.rest-wrapper {
+    display: flex;
+    font-family: sans-serif;
+}
+
+.rest-wrapper .image {
+    margin-right: 1rem;
+}
+
+.rest-wrapper .image img {
+    border-radius: 4px;
+}
+
+.rest-wrapper .rest-name {
+    font-size: 24px;
+    color: #cb202d;
+}
+
+.rest-wrapper .rest-category {
+    color: #89959B;
+    text-transform: uppercase;
+}
+
+.rest-wrapper .rest-address {
+    color: #89959B;
+}
+
+.rest-extra {
+    display: flex;
+    margin-top: 1rem;
+    border-top: 1px solid #e7e7e7;
+    padding: 1rem;
+}
+
+.rest-extra .type {
+    text-transform: uppercase;
+     color: #89959B;
+     flex: none;
+     margin-right: 2rem;
+}
+
+.restaurant .rating {
+    color: white;
+    background-color: #5BA829;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+}
+
+
+.search-bar {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar form .input-wrapper {
+   flex: 1;
+   margin-right: 1rem;
+}
+
+/*for best dishes*/
+.bestDish .button {
+    display: inline-block;
+    background-color:#cb202d;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button1 {
+    align-items: center;
+    text-align: center;
+    background-color:#cb202d;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.aboutus{
+  font-size: 20px;
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+.team{
+  background-color: White;
+  padding: 20px;
+  margin:5px;
+}
+hr {
+height: 1px;
+color: #cb202d;
+background-color: #cb202d;
+border: none;
+}
+.b{
+  margin: 10px;
+		text-align: center;
+    font-size: 15px;
+		}
+#a1{
+		color:#cb202d;
+		font-size: 30px;
+		}
+.au1{
+  font-size: 30px;
+		color: #cb202d;
+		}
+img.center {
+        display: block;
+        margin: 0 auto;
+    }
+.bg{
+  background: url("image.jpg");
+  background-size: cover;
+}
+
+/*css for order page*/
+table{
+  margin-top: 70px;
+}
+tr{
+  font-size: 20px;
+  text-align: center;
+}
+.me{
+  margin-right:60px;
+  padding:15px;
+}
+.inp{
+  padding:5px;
+  border-radius: 5px;
+  border-width: : 0;
+}
+.color2{
+  background-color: dark gray;
+}
+.culture{
+  background-color: white;
+  padding-bottom: 50px;
+}
+.culture table{
+  margin-left: 100px;
+  padding-top: 10px;
+}
+.extrafeatures{
+  margin: 10px;
+}
+.btn{
+  margin:8px;
+}

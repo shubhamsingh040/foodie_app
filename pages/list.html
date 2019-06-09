@@ -1,0 +1,140 @@
+
+  <div class ="list"  ng-controller = "listController" >
+    <nav class="navbar navbar-default navbar-fixed">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Foodie</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#!/home">Home</a></li> <!--to go to the home page -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div id ="container" >
+      <h1 ng-show="gl==1" >Grocery list<i class="fa fa-plus"></i></h1>
+      <ul ng-show="gl==1" ng-repeat="groc in grocery">
+          <li ng-click="toggle(groc.id)"><span id="imag"><img ng-src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/512/Tick_Mark-128.png" alt="" height="20px" ng-class="{'hide':!groc.buy}"></span> <span id="items" style="position:absolute" ng-class="{'line':groc.buy}">{{groc.name}}</span></li>
+      </ul>
+      <h1 ng-show="gl==2">Items bought</h1>
+      <ul ng-show="gl==2" ng-repeat="b in bought">
+          <li > <span  style="position:absolute; margin-left:100px"><img src="https://pbs.twimg.com/profile_images/2696101030/2873df0c892beeb3dad751af1db6224d_400x400.jpeg" width="15px" height="15px">  {{b.name}}</span></li>
+      </ul>
+      <h1 ng-show="gl==3">Items Not bought</h1>
+      <ul  ng-show="gl==3" ng-repeat="b in notbought">
+          <li > <span  style="position:absolute; margin-left:100px"><img src="http://fb.ru/misc/i/gallery/30496/684055.jpg" width="20px" height="15px">  {{b.name}}</span></li>
+      </ul>
+
+      <div class="footer">
+<hr>
+      <button class="button1" type="button" name="button" ng-click="all_list()"><b>All</b></button>
+      <button class="button1" type="button" name="button" ng-click="filter();not_bought()"><b>Active</b></button>
+      <button class="button1" type="button" name="button" ng-click="filter();bought_item()"><b>Completed</b></button>
+     <br><br><br>
+    </div>
+  </div>
+</div>
+
+
+<style media="screen">
+.list{
+  background: url("http://i0.wp.com/thumbs.dreamstime.com/z/open-book-old-letters-postcards-travel-scrapbook-france-pa-vintage-style-paper-background-paris-54800750.jpg?quality=80&strip=all");
+  background-size: cover;
+}
+.fa-plus
+{
+float: right;
+}
+.important
+{
+color: grey;
+text-decoration: line-through;
+}
+#container
+{
+background-color: #f7f7f7;
+width: 860px;
+margin: 100px auto;
+margin-bottom: 0px;
+font-size: 25px;
+font-family: 'Eras Demi ITC';
+box-shadow: 0,0,3px,rgb(0,0,0,0.1);
+}
+#imag {
+background: lightgrey;
+height: 40px;
+margin-right: 20px;
+text-align: center;
+color: white;
+width: 70px;
+display: inline-block;
+opacity: 1;
+position: relative;
+}
+.footer{
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+.fa-trash
+{
+position: relative;
+top: 10px;
+}
+h1
+{
+color: white;
+background-color: #cb202d;
+font-weight: normal;
+font-size: 44px;
+text-align: center;
+font-family: 'Forte';
+margin: 0px;
+padding: 10px ;
+}
+ul
+{
+padding: 0px;
+margin: 0px;
+list-style: none;
+}
+input:focus
+{
+outline: none;
+}
+li
+{
+height: 40px;
+color: #666;
+line-height: 40px;
+}
+li:nth-child(2n)
+{
+background-color: white;
+}
+input[type='text']
+{
+width: 100%;
+padding: 10px;
+border: 3px solid rgba(0,0,0,0);
+}
+.hide{
+display: none;
+}
+.line{
+text-decoration: line-through;
+}
+
+</style>
+</html>

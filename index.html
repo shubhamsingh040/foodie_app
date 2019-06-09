@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Initialize the app using 'ng-app' directive and app name is foodieApp-->
+<html lang="en" ng-app='foodieApp'> <!--'ng-app' tells that it is an angular application (It's scope -> for entire html document) -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foodie</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/angular.min.js"></script> <!-- Add angularJS to your application -->
+    <!--Putting angular script tag in HEAD, gives AngularJS some time to catch the tags with double curly braces before they are shown-->
+    <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script> <!-- Added the script that enabled routing in angularJS -->
+
+    <!-- Angular form classes to style the form (invalid and valid states) -->
+    <style media="screen">
+        /*FOR INVALID STATE - this only works when the input is both 'invalid' and 'dirty'*/
+        input.ng-invalid.ng-dirty {
+            border: 1.2px solid red; /*1.5 to highlight that it is invalid*/
+        }
+        /*this give the initial color of the input box when user has not typed anything*/
+        input.ng-pristine{
+            border: 1.2px solid purple;
+        }
+        /*FOR VALID STATE - this shows that the input is valid in the input box*/
+        input.ng-valid{
+           border: 1.2px solid lightgreen;
+        }
+    </style>
+</head>
+
+<body id="app">
+    <!-- 'ng-view' tells angular where we want to show our view inside (So whenever url(route) changes, content inside this 'ng-view' only updates)-->
+    <div ng-view></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- <script src="list/node_modules/angular/angular.js"></script> -->
+    <!-- <script src="list/node_modules/angular-route/angular-route.js"></script>
+    <script src="list/node_modules/angular-resource/angular-resource.js"></script>
+     <script src="list/js/app.js"></script> -->
+    <!-- <script src="list/js/controllers/todoCtrl.js"></script>
+    <script src="list/js/services/todoStorage.js"></script>
+    <script src="list/js/directives/todoFocus.js"></script>
+    <script src="list/js/directives/todoEscape.js"></script> -->
+
+</body>
+</html>
